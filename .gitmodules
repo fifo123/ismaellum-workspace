@@ -1,3 +1,6 @@
 [submodule "ismaellum-api"]
 	path = ismaellum-api
 	url = https://github.com/fifo123/ismaellum-api.git
+[submodule "ismaellum-app"]
+	path = ismaellum-app
+	url = https://github.com/fifo123/ismaellum-app.git
