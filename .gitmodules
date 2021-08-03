@@ -4,3 +4,6 @@
 [submodule "ismaellum-app"]
 	path = ismaellum-app
 	url = https://github.com/fifo123/ismaellum-app.git
+[submodule "ismaellum-arduino"]
+	path = ismaellum-arduino
+	url = https://github.com/fifo123/ismaellum-arduino.git
