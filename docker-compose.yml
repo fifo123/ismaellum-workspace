@@ -1,6 +1,19 @@
 version: '3'
 
 services: 
+  db:
+    image: postgres:12.4
+    ports: 
+      - '5432:5432'
+    networks:
+      - base_network
+    volumes: 
+      - db_data:/var/lib/postgres
+    environment: 
+      POSTGRES_DB: ismaellum
+      POSTGRES_USER: ismaellum
+      POSTGRES_PASSWORD: ismaellum
+    
   api:
     image: 'node:14.16.0'
     networks:
@@ -8,10 +21,14 @@ services:
     ports: 
       - '3000:3000'
     command: sh -c "npm run start:dev"
+    depends_on: 
+      - db
     working_dir: /app
     volumes: 
       - ./ismaellum-api:/app
 
 networks: 
   base_network:
-    
+
+volumes:
+  db_data:
